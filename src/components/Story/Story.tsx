@@ -57,8 +57,54 @@ const Story = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-cream" id="story">
-      <div className="container mx-auto px-6">
+    <section ref={sectionRef} className="py-20 bg-cream relative overflow-hidden" id="story">
+      {/* Architectural Elements - Jharokhas */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Left Jharokha */}
+        <div className="absolute top-10 left-0 w-32 h-64 opacity-20">
+          <svg viewBox="0 0 100 200" className="w-full h-full text-vintage-brown">
+            {/* Arch structure */}
+            <path d="M20,180 L20,60 Q20,20 50,20 Q80,20 80,60 L80,180 Z" fill="none" stroke="currentColor" strokeWidth="2"/>
+            {/* Decorative columns */}
+            <rect x="25" y="60" width="3" height="120" fill="currentColor"/>
+            <rect x="72" y="60" width="3" height="120" fill="currentColor"/>
+            {/* Intricate patterns */}
+            <circle cx="50" cy="50" r="8" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <path d="M35,40 Q50,30 65,40" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <path d="M35,60 Q50,50 65,60" fill="none" stroke="currentColor" strokeWidth="1"/>
+            {/* Base platform */}
+            <rect x="15" y="175" width="70" height="5" fill="currentColor"/>
+          </svg>
+        </div>
+        
+        {/* Right Jharokha */}
+        <div className="absolute top-16 right-0 w-28 h-56 opacity-15">
+          <svg viewBox="0 0 100 200" className="w-full h-full text-primary-orange">
+            {/* Multiple arches */}
+            <path d="M15,180 L15,70 Q15,30 35,30 Q55,30 55,70 L55,180" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <path d="M45,180 L45,70 Q45,30 65,30 Q85,30 85,70 L85,180" fill="none" stroke="currentColor" strokeWidth="2"/>
+            {/* Decorative elements */}
+            <circle cx="35" cy="50" r="5" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="65" cy="50" r="5" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <path d="M20,90 Q35,85 50,90 Q65,85 80,90" fill="none" stroke="currentColor" strokeWidth="1"/>
+            {/* Base */}
+            <rect x="10" y="175" width="80" height="5" fill="currentColor"/>
+          </svg>
+        </div>
+
+        {/* Traditional Archway at bottom */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-40 h-20 opacity-10">
+          <svg viewBox="0 0 200 50" className="w-full h-full text-primary-orange">
+            <path d="M20,45 L20,25 Q20,5 50,5 L150,5 Q180,5 180,25 L180,45" fill="none" stroke="currentColor" strokeWidth="3"/>
+            <path d="M30,40 Q50,30 70,40 Q90,30 110,40 Q130,30 150,40 Q170,30 170,40" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="50" cy="25" r="3" fill="currentColor"/>
+            <circle cx="100" cy="25" r="3" fill="currentColor"/>
+            <circle cx="150" cy="25" r="3" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div 
             ref={imageRef}
