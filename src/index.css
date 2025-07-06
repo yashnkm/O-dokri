@@ -37,3 +37,8 @@ h1, h2, h3, h4, h5, h6 {
 html {
   scroll-behavior: smooth;
 }
+
+.rajasthani-dots {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 106, 42, 0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}

@@ -4,26 +4,55 @@ const Hero = () => {
       
       {/* Animated Rajasthani Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Floating Paisley Patterns */}
-        <div className="absolute top-1/4 left-10 w-20 h-20 opacity-20 animate-pulse">
+        {/* Large Floating Paisley Patterns */}
+        <div className="absolute top-1/4 left-10 w-32 h-32 opacity-40 animate-pulse">
           <svg viewBox="0 0 100 100" className="w-full h-full text-vintage-brown animate-spin" style={{ animationDuration: '20s' }}>
             <path d="M30,50 C30,30 40,20 60,20 C80,20 90,30 90,50 C90,70 80,80 60,80 C50,80 40,75 35,65 C32,60 30,55 30,50 Z" fill="currentColor"/>
           </svg>
         </div>
 
-        {/* Mandala Pattern */}
-        <div className="absolute top-16 right-20 w-24 h-24 opacity-15 animate-bounce" style={{ animationDuration: '4s' }}>
+        {/* Large Mandala Pattern */}
+        <div className="absolute top-16 right-20 w-40 h-40 opacity-30 animate-bounce" style={{ animationDuration: '4s' }}>
           <svg viewBox="0 0 100 100" className="w-full h-full text-primary-orange animate-spin" style={{ animationDuration: '15s' }}>
-            <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" strokeWidth="2"/>
-            <circle cx="50" cy="50" r="10" fill="none" stroke="currentColor" strokeWidth="1"/>
-            <circle cx="50" cy="50" r="3" fill="currentColor"/>
-            {Array.from({ length: 8 }, (_, i) => (
+            <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="50" cy="50" r="15" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <circle cx="50" cy="50" r="5" fill="currentColor"/>
+            {Array.from({ length: 12 }, (_, i) => (
               <line
                 key={i}
                 x1="50"
                 y1="50"
-                x2={50 + 20 * Math.cos(i * Math.PI / 4)}
-                y2={50 + 20 * Math.sin(i * Math.PI / 4)}
+                x2={50 + 25 * Math.cos(i * Math.PI / 6)}
+                y2={50 + 25 * Math.sin(i * Math.PI / 6)}
+                stroke="currentColor"
+                strokeWidth="1"
+              />
+            ))}
+          </svg>
+        </div>
+
+        {/* Additional Large Floating Elements */}
+        <div className="absolute top-1/3 right-1/4 w-28 h-28 opacity-25 animate-pulse" style={{ animationDelay: '2s' }}>
+          <svg viewBox="0 0 100 100" className="w-full h-full text-primary-orange animate-spin" style={{ animationDuration: '25s' }}>
+            <path d="M50,10 Q70,30 50,50 Q30,30 50,10 M50,50 Q70,70 50,90 Q30,70 50,50 M10,50 Q30,70 50,50 Q30,30 10,50 M90,50 Q70,70 50,50 Q70,30 90,50" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <div className="absolute bottom-1/4 left-1/3 w-36 h-36 opacity-20 animate-bounce" style={{ animationDelay: '1s', animationDuration: '6s' }}>
+          <svg viewBox="0 0 100 100" className="w-full h-full text-vintage-brown animate-spin" style={{ animationDuration: '30s' }}>
+            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" strokeWidth="1"/>
+            <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <circle cx="50" cy="50" r="10" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <circle cx="50" cy="50" r="5" fill="currentColor"/>
+            {Array.from({ length: 16 }, (_, i) => (
+              <line
+                key={i}
+                x1="50"
+                y1="50"
+                x2={50 + 20 * Math.cos(i * Math.PI / 8)}
+                y2={50 + 20 * Math.sin(i * Math.PI / 8)}
                 stroke="currentColor"
                 strokeWidth="1"
               />
