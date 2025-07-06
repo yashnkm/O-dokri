@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&family=Inter:wght@400;500;700;900&family=Kristi&display=swap');
+
+:root {
+  --primary-orange: #FF6A2A;
+  --soft-pink: #FFF3F0;
+  --cream: #FFF8F3;
+  --dark-text: #181311;
+  --muted-text: #886f63;
+  --vintage-brown: #a38560;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cream);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-kristi {
+  font-family: 'Kristi', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
